@@ -1,5 +1,5 @@
 # nobloat_website
-My no bloat static HTML and CSS blog.
+[My no bloat static HTML and CSS blog.](chrisgyman.com)
 
 ## 📨 Useful scripts 📨
 To quickly make new blog posts and append them to the pages directory a python script was made which appends boilierplate HTML code for my website and combines it with a markdown text template file. This allows easy creation of new blog posts.
