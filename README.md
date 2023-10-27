@@ -5,6 +5,12 @@ My no bloat static HTML and CSS blog.
 To quickly make new blog posts and append them to the pages directory a python script was made which appends boilierplate HTML code for my website and combines it with a markdown text template file. This allows easy creation of new blog posts.
 
 To run the file specify you must edit <em>create_blogpost.py</em> directories so they work with your file system's directories.
+.
+└── nobloat_website/
+    └── scripts/
+        ├── __create_blogpost.py__
+        ├── blog_template.html
+        └── markdown_template.html
 
 ## Why make a website?
 <em>27-10-2023</em>
