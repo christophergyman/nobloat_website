@@ -1,48 +1,26 @@
 	<md-block>
 
-# [script] create_blogpost.py 
-<em>27-10-2023</em>
+# Why use components? 
+<em>06-11-2023</em>
+## Figured out the need for components 😤
+Through creating my own static website using very ☠barebones☠️ frameworks I have noticed a need for modularzing repeating blocks of HTML code. Everytime I want to make a new blogpost(webpage) I have to:
 
-I made this script so that I can append markdown text into a prebuilt boilerplate for my website, meaning its alot faster for me to make a new blog post as I just have to write the markdown page then run the script to generate the html file.
+1. Write content of blogpost
+2. Create boilerplate html page that copies the same theme of my site
+3. Append contents of blogpost
+4. Combine above steps into one HTML page ready to push
 
-The code for creating the script in python3:
-```
-import os
+## How I solved this? 
+This issue was solved by using the library 👾[mdblocks](https://md-block.verou.me/)👾.
 
-# Define the file paths
-markdown_template_path = "markdown_template.html"
-html_markup_path = "blog_template.html"
+I could just create the contents of my blog super quickly using markdown text (which is easy to write), then use a🐍python🐍 script to combine the markdown text with a boiilerplate of a html page. And funny enough this is the approach that I took within writing my 🖥️[create_blogpost.py](http://www.chrisgyman.com/06-11-2023_create_blogpost.py.html)🖥️ script ️
 
-post_date = input("Date for post DD-MM-YYYY: ")
-undercase = "_"
-post_name = input("PostName (space = -): ")
-html_string = ".html"
+## Why this approach?
+The intial idea of forcing myself to use barebones frameworks has forced myself to use janky workarounds which actually work in production. This has not only increased my apprecation for larger scale frameworks such as [react](https://reactnative.dev/) but has given me a actual reason to use the newer frameworks and understand what they are doing under the hood.
 
-final_path = post_date + undercase + post_name + html_string
+## Future updates to the site
+Something that I have also found to be a slight annoyance using pure HTML and CSS is that styling new things is a pain. Having to make a class or id at the top of the page and in some cases on another css file is very time consuming and hard to relate to what contents its changing 🤬. I am only now starting to appreactiate things like 🌬️[tailwind css](https://tailwindcss.com/)🌬️ which utilize in line css to change how things looks. 
 
-# Specify directory to place new file
-# parent_dir = os.path.dirname(os.getcwd())
-specified_dir = "/home/chezu/Documents/github/nobloat_website/pages"
-
-# Create the new post file path in the specified directory 
-new_post_path = os.path.join(specified_dir, final_path)
-
-# Read the content of the markdown template file
-with open(markdown_template_path, "r") as template_file:
-    markdown_content = template_file.read()
-
-# Read the content of the HTML markup file
-with open(html_markup_path, "r") as markup_file:
-    html_lines = markup_file.readlines()
-
-# Insert the markdown content at line 57 (0-based index)
-insert_line_number = 59  # Line 57 in a 0-based index
-html_lines.insert(insert_line_number, markdown_content)
-
-# Write the modified content to the new post file
-with open(new_post_path, "w") as new_post_file:
-    new_post_file.writelines(html_lines)
-```
-This script alongside md-blocks allows me to create new blogposts so fast meaning I can focus on producing content rather then worrying about actually uploading a new post.
+A future project may be to make a jank version of tailwind and have a massive file of premade css that I can call upon via one css include. We'll have to see if this is a viable option 🤣 
 
 	</md-block>

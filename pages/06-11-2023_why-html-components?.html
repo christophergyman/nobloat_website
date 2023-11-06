@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- MDblock to render markdown to HTMl-->
+<!-- https://www.makeuseof.com/md-block-render-markdown-web-page/ -->
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Why HTML components are needed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<style>
+    .title {
+        color: #9A3B3B;
+        margin: auto;
+        text-align: center;
+        width: 50%;
+        /* border: 3px solid green; */
+    }
+    
+    body{
+        background-color: #1a1a1a;
+        color: white;
+    }
+    
+    .siteH2{
+        color:#ED7D31;
+        text-align: center;
+        /* border: 3px solid green; */
+    }
+    
+    article{
+        margin: auto;
+        width: 45%;
+        /* border: 3px solid green; */
+    }
+    
+    a{
+        color: #2679ff;
+    }
+    
+    .Date_Stamps{
+        color: gray;
+    }
+</style>
+
+<body>
+    
+    <h1 class="title">Chris's Webpage</h1>
+    <article>
+        <!--Insert template here  -->
+        
+        <!-- Projects section -->
+	<md-block>
+
+# Why use components? 
+<em>06-11-2023</em>
+### Figured out the need for components 😤
+Through creating my own static website using very ☠barebones☠️ frameworks I have noticed a need for modularzing repeating blocks of HTML code. Everytime I want to make a new blogpost(webpage) I have to:
+
+1. Write content of blogpost
+2. Create boilerplate html page that copies the same theme of my site
+3. Append contents of blogpost
+4. Combine above steps into one HTML page ready to push
+
+### How I solved this? 
+This issue was solved by using the library 👾[mdblocks](https://md-block.verou.me/)👾.
+
+I could just create the contents of my blog super quickly using markdown text (which is easy to write), then use a🐍python🐍 script to combine the markdown text with a boiilerplate of a html page. And funny enough this is the approach that I took within writing my 🖥️[create_blogpost.py](http://www.chrisgyman.com/06-11-2023_create_blogpost.py.html)🖥️ script ️
+
+### Why this approach?
+The intial idea of forcing myself to use barebones frameworks has forced myself to use janky workarounds which actually work in production. This has not only increased my apprecation for larger scale frameworks such as [react](https://reactnative.dev/) but has given me a actual reason to use the newer frameworks and understand what they are doing under the hood.
+
+#### Future updates to the site
+Something that I have also found to be a slight annoyance using pure HTML and CSS is that styling new things is a pain. Having to make a class or id at the top of the page and in some cases on another css file is very time consuming and hard to relate to what contents its changing 🤬. I am only now starting to appreactiate things like 🌬️[tailwind css](https://tailwindcss.com/)🌬️ which utilize in line css to change how things looks. 
+
+A future project may be to make a jank version of tailwind and have a massive file of premade css that I can call upon via one css include. We'll have to see if this is a viable option 🤣 
+
+	</md-block>
+        <div style="padding-top: 30px;">
+            <h2 class="siteH2">My Projects</h2>
+            <dl>
+                
+                <dt><a href="https://www.github.com/christophergyman">💾 Github.com</a></dt>
+                <dd>Personal Code Repo's</dd>
+                
+                <dt><a href="https://christophergyman.github.io/">📔 Github React Website</a></dt>
+                <dd>Website made to learn react</dd>
+                
+            </dl>
+        </div>
+        
+        <div style="margin:auto; text-align: center;">
+            <a href="http://www.chrisgyman.com/homepage.html">http://chrisgyman.com/homepage.html</a>
+        </div>
+        
+    </article>
+    
+</body>
+
+</html>
