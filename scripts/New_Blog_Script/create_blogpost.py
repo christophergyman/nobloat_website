@@ -1,8 +1,8 @@
 import os
 
 # Define the file paths
-markdown_template_path = "markdown_template.html"
-html_markup_path = "blog_template.html"
+markdown_template_path = "scripts/New_Blog_Script/markdown_template.html"
+html_markup_path = "scripts/New_Blog_Script/blog_template.html"
 
 post_date = input("Date for post DD-MM-YYYY: ")
 undercase = "_"
